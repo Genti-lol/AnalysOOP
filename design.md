@@ -30,7 +30,7 @@ class Library {
   - findBookByIsbn(isbn : String) : Book
 }
 @enduml
-
+```
 ## Ответы на вопросы
 
 **Вопрос 1. Какие атрибуты Book должны быть неизменяемыми после создания? Почему?**
