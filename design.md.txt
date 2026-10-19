@@ -1,0 +1,32 @@
+# Проектирование классов
+
+## UML-диаграмма
+
+Ниже представлен код PlantUML для диаграммы классов.
+
+```plantuml
+@startuml
+class Book {
+  - isbn : String
+  - author : String
+  - title : String
+  - isAvailable : Boolean
+  + getIsbn() : String
+  + getAuthor() : String
+  + getTitle() : String
+  + isAvailable() : Boolean
+  + markAsIssued() : void
+  + markAsReturned() : void
+}
+
+class Library {
+  - books : List<Book>
+  + addBook(book : Book) : void
+  + issueBook(isbn : String) : void
+  + returnBook(isbn : String) : void
+  + getAllBooks() : List<Book>
+  + getAvailableBooks() : List<Book>
+  + getIssuedBooks() : List<Book>
+  - findBookByIsbn(isbn : String) : Book
+}
+@enduml
